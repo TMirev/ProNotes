@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Board</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1><img src="images/notes.png">ProNotes</h1>
+
+
+        <div class="top-bar">
+            <button class="btn"><img src="images/edit.png">Create Notes</button>
+            <input type="text" id="searchBar" placeholder="Search notes....">
+
+            <button id="bgToggle" class="bg-toggle">🌙</button>
+            <button id="fontIncrease" class="font-btn">A+</button>
+            <button id="fontDecrease" class="font-btn">A-</button>
+            <button id="templateBtn" class="kebab-btn">⋮</button>
+
+
+            <div id="templateMenu" class="template-menu hidden">
+                <div data-template="shopping">🛒 Shopping List</div>
+                <div data-template="study">📚 Study Notes</div>
+                <div data-template="work">💼 Work Tasks</div>
+                <div data-template="journal">📝 Daily Journal</div>
+                <div data-template="sports">🏃 Sports / Activities</div>
+            </div>
+
+        </div>
+
+        <div class="color-archive-row">
+            <div class="color-picker">
+                <div class="color-option" data-color="#FAFAFA"></div>
+                <div class="color-option" data-color="#ffeb3b"></div>
+                <div class="color-option" data-color="#ff8a80"></div>
+                <div class="color-option" data-color="#A8E6A3"></div>
+            </div>
+
+            <button id="openArchive" class="archive-btn">📁 Archive</button>
+
+        </div>
+
+        <div class="notes-container"></div>
+
+        <script src="index.js"></script>
+
+</body>
+
+</html>

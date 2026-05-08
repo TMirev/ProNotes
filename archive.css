@@ -1,0 +1,112 @@
+.input-box img,
+.delete-icon,
+.pin-btn,
+.complete-btn,
+.underline-btn {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#appContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.top-bar #searchBar,
+.top-bar .bg-toggle {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Make archived notes responsive */
+#archiveContainer .input-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff;
+    margin-bottom: 15px;
+}
+
+/* Prevent inner elements from stretching */
+#archiveContainer .input-box * {
+    max-width: 100%;
+    word-break: break-word;
+}
+
+/* Override index page layout rules */
+#archiveContainer .input-box {
+    display: block !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+}
+
+
+/* Match notes page behavior: only container background changes */
+#appContainer.dark-background {
+    background-color: #2f2f2f !important;
+    background-image: none !important;
+}
+
+#appContainer h1 {
+    color: #fff;
+}
+
+#archiveContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.archive-note {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.archive-note .input-box {
+    margin-bottom: 8px !important;
+}
+
+.archive-note .restore-btn {
+    align-self: flex-end;
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    #appContainer {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}
+
+#appContainer.font-btn {
+    padding: 6px 10px;
+    margin-left: 5px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
